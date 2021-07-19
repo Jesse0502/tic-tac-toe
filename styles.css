@@ -1,38 +1,38 @@
-body{
+body {
     margin: 0;
     padding: 0;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color: rgb(0, 0, 41);
+    background-color: rgb(0, 0, 40);
     color: whitesmoke;
 }
- 
-.heading-main{
+
+.heading-main {
     text-align: center;
     font-size: 4rem;
     margin-top: 15%;
     color: white;
 }
- 
-.start-btn{
+
+.start-btn {
     margin: 0;
     position: absolute;
     top: 50%;
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    padding: 2vh 4vh ;
+    padding: 2vh 4vh;
     color: white;
     background: transparent;
     border: 2px solid rgb(150, 31, 230);
 }
- 
-.start-btn:hover{
+
+.start-btn:hover {
     background: rgb(150, 31, 230, 0.2);
-    color:  rgb(255, 255, 255); 
+    color: rgb(255, 255, 255);
     animation: 2s;
 }
- 
-.playground{
+
+.playground {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     position: absolute;
@@ -41,57 +41,77 @@ body{
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
- 
-.boxes{ 
+
+.boxes {
     font-size: 3rem;
     height: 130px;
     width: 130px;
-    border: 2px  solid rgb(255, 255, 255);
+    border: 2px solid rgb(255, 255, 255);
     background: transparent;
     color: white;
 }
- 
-.resetButton{
-  margin: 0;
-  position: absolute;
-  left: 50%;
-  top: -15%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  padding: 15px 35px; 
-  background-color: rgb(150, 31, 230);
-  color: whitesmoke;
-  border: 2px solid rgb(150, 31, 230);
-  background-color: transparent
-}
- 
-.resetButton:hover{
-    background-color: rgb(150, 31, 230, 0.2); 
-}
- 
- 
-.boxes:nth-child(3),
-.boxes:nth-child(2),
-.boxes:nth-child(4){
-    border-top: none; 
+
+.resetButton {
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    top: -15%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    padding: 15px 35px;
+    background-color: rgb(150, 31, 230);
+    color: whitesmoke;
+    border: 2px solid rgb(150, 31, 230);
+    background-color: transparent
 }
 
- .boxes:nth-child(5),
+.winningMessage {
+    position: absolute;
+    font-size: 2.3em;
+    z-index: 1;
+    padding-top: 20%;
+    padding-left: 42%;
+    background-color: rgb(0, 0, 0, 0.8);
+    color: white;
+    height: 57%;
+    width: 58%;
+    animation-name: example;
+    animation-duration: 1s;
+}
+
+@keyframes example {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.resetButton:hover {
+    background-color: rgb(150, 31, 230, 0.2);
+}
+
+.boxes:nth-child(3),
 .boxes:nth-child(2),
-.boxes:nth-child(8){
+.boxes:nth-child(4) {
+    border-top: none;
+}
+
+.boxes:nth-child(5),
+.boxes:nth-child(2),
+.boxes:nth-child(8) {
     border-left: none;
 }
 
-
 .boxes:nth-child(4),
 .boxes:nth-child(7),
-.boxes:nth-child(10){
+.boxes:nth-child(10) {
     border-right: none;
 }
 
-
 .boxes:nth-child(8),
 .boxes:nth-child(9),
-.boxes:nth-child(10){
+.boxes:nth-child(10) {
     border-bottom: none;
-}  
+}
